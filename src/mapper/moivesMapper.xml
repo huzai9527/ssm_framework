@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.moivesMapper">
+    <insert id="addMoive" parameterType="moive" >
+        insert into moives values (#{title},#{score},#{stars},#{releasetime},#{id},#{url},#{imgUrl})
+    </insert>
+    <select id="selectById" parameterType="int" resultType="moive">
+        select * from moives where id =#{id}
+    </select>
+    <select id="queryall" resultType="moive">
+        select * from moives
+    </select>
+
+</mapper>
